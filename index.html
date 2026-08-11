@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Wealth Academy | VIP WhatsApp Group</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #151a23;
+            --gold: #d4af37;
+            --gold-hover: #f3e5ab;
+            --whatsapp-green: #25d366;
+            --text-light: #f5f5f7;
+            --text-muted: #a1a1a6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1c2331 0%, var(--bg-color) 70%);
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid var(--gold);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-cta {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #fff;
+            padding: 16px 36px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 20px 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-50px);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Pricing Table */
+        .pricing {
+            background: #07090d;
+            padding: 80px 20px;
+        }
+
+        .pricing-table {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .pricing-table th, .pricing-table td {
+            padding: 18px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pricing-table th {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .stats { gap: 15px; }
+            .stat-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="badge">Exclusive Trading Club</div>
+        <h1>Master Stock Market With <span>Institutional Precision</span></h1>
+        <p>Daily High-Probability Stock Alerts, Live Risk Management, and Portfolio Strategy on WhatsApp.</p>
+        <a href="https://wa.me/919588768890?text=Hi,%20I%20want%20to%20join%20the%20VIP%20Stock%20Market%20Group" class="btn-cta">
+            <i class="fab fa-whatsapp"></i> Join VIP WhatsApp Group
+        </a>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>5,000+</h3>
+                <p>Active Members</p>
+            </div>
+            <div class="stat-card">
+                <h3>85%+</h3>
+                <p>Accuracy Rate</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Risk Managed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="features">
+        <h2 class="section-title">What You Get Inside VIP</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Daily Trade Alerts</h3>
+                <p>Precise entry, target, and stop-loss levels for Equity, Nifty & BankNifty trades.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Risk Management</h3>
+                <p>Learn how to protect your capital using position sizing and disciplined rules.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-user-tie"></i>
+                <h3>1-on-1 Guidance</h3>
+                <p>Direct access to expert insights for your existing stock portfolio audit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2 class="section-title">Choose Your Access Level</h2>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Features</th>
+                    <th>Monthly VIP</th>
+                    <th>Lifetime Wealth Pass</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Daily WhatsApp Tips</td>
+                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
+                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
+                </tr>
+                <tr>
+                    <td>Risk Management Calls</td>
+                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
+                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
+                </tr>
+                <tr>
+                    <td>Portfolio Audit</td>
+                    <td><i class="fas fa-times" style="color:#e74c3c;"></i></td>
+                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><strong>₹1,999 / mo</strong></td>
+                    <td><strong>₹9,999 One-Time</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="footer-cta">
+        <h2 style="margin-bottom: 15px;">Ready to Scale Your Capital?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">Only 15 seats left for this week's cohort.</p>
+        <a href="https://wa.me/919588768890?text=Hi,%20I%20want%20to%20join%20the%20VIP%20Stock%20Market%20Group" class="btn-cta">
+            <i class="fab fa-whatsapp"></i> Chat On WhatsApp (+91 9588768890)
+        </a>
+    </section>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/919588768890?text=Hi,%20I%20want%20to%20join%20the%20VIP%20Stock%20Market%20Group" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
