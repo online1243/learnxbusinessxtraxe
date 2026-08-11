@@ -1,345 +1,214 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="hi" class="scroll-smooth">
 <head>
-
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1449165750311786');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1449165750311786&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-
-
-
-
-
-
-
-
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Wealth Academy | VIP WhatsApp Group</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>STRANDER | Premium Business, Trading & Economics</title>
+    
+    <!-- Tailwind CSS (Fast Loading CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts for Luxury Aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --bg-color: #0b0e14;
-            --card-bg: #151a23;
-            --gold: #d4af37;
-            --gold-hover: #f3e5ab;
-            --whatsapp-green: #25d366;
-            --text-light: #f5f5f7;
-            --text-muted: #a1a1a6;
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #08080a;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .font-serif-luxury {
+            font-family: 'Cinzel', serif;
         }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-light);
-            line-height: 1.6;
+        .luxury-bg { 
+            background: radial-gradient(circle at 50% -20%, #1a160d 0%, #08080a 70%); 
         }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 20px 60px;
-            text-align: center;
-            background: radial-gradient(circle at center, #1c2331 0%, var(--bg-color) 70%);
+        .gold-glow { 
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.15); 
         }
-
-        .badge {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold);
-            padding: 8px 16px;
-            border-radius: 50px;
-            border: 1px solid var(--gold);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 20px;
+        .gold-border-glow {
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
         }
-
-        h1 {
-            font-size: 2.8rem;
-            color: var(--text-light);
-            margin-bottom: 15px;
-            font-weight: 700;
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        h1 span {
-            color: var(--gold);
+        .gold-button {
+            background: linear-gradient(135deg, #ECC86A 0%, #D4AF37 50%, #9B7318 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 30px;
+        .gold-button:hover {
+            background: linear-gradient(135deg, #F3D88D 0%, #E2BD48 50%, #B38321 100%);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
         }
-
-        .btn-cta {
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: #fff;
-            padding: 16px 36px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
+        .glass-card {
+            background: rgba(18, 18, 22, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-
-        .btn-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(37, 211, 102, 0.6);
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-4px);
         }
-
-        /* Stats Section */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 50px;
-            flex-wrap: wrap;
+        .pulse-subtle {
+            animation: pulse-glow 3s infinite alternate;
         }
-
-        .stat-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 20px 40px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .stat-card h3 {
-            font-size: 2rem;
-            color: var(--gold);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            color: var(--gold);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-color: var(--gold);
-            transform: translateY(-50px);
-        }
-
-        .card i {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-
-        /* Pricing Table */
-        .pricing {
-            background: #07090d;
-            padding: 80px 20px;
-        }
-
-        .pricing-table {
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
-        }
-
-        .pricing-table th, .pricing-table td {
-            padding: 18px 20px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .pricing-table th {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold);
-            font-size: 1.1rem;
-        }
-
-        /* Footer CTA */
-        .footer-cta {
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: var(--whatsapp-green);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .stats { gap: 15px; }
-            .stat-card { width: 100%; }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px rgba(34, 197, 94, 0.2); }
+            100% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.5); }
         }
     </style>
+
+    <!-- Meta Pixel Code 1 (ID: 1449165750311786) -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1449165750311786');
+    fbq('track', 'PageView');
+    </script>
+    
+    <!-- Meta Pixel Code 2 (ID: 1073841918648635) -->
+    <script>
+    fbq('init', '1073841918648635');
+    fbq('track', 'PageView');
+    </script>
 </head>
-<body>
+<body class="luxury-bg text-gray-200 min-h-screen antialiased selection:bg-amber-500 selection:text-black flex flex-col justify-between">
+
+    <!-- Top Announcement Bar (High Urgency) -->
+    <div class="bg-gradient-to-r from-amber-950 via-zinc-900 to-amber-950 border-b border-amber-500/20 text-center py-2 px-4 text-xs font-semibold tracking-wider text-amber-200/90 uppercase">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping mr-1.5"></span> Exclusive Private Mentorship Circle • Limited Entries
+    </div>
+
+    <!-- Header Section -->
+    <header class="py-5 px-6 border-b border-white/5 backdrop-blur-xl sticky top-0 z-50 bg-black/60">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo -->
+            <div class="text-2xl md:text-3xl font-serif-luxury font-extrabold tracking-widest uppercase">
+                <span class="gold-gradient-text">Strander</span>
+            </div>
+            <a href="https://wa.me/919588768890?text=Hi%20Strander,%20I%20want%20to%20learn%20Trading%20%26%20Business" onclick="trackLead()" class="gold-button text-black font-extrabold px-6 py-2.5 rounded-full text-xs md:text-sm tracking-wider uppercase transition-all shadow-md flex items-center gap-2">
+                Join Inner Circle <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="badge">Exclusive Trading Club</div>
-        <h1>Master Stock Market With <span>Institutional Precision</span></h1>
-        <p>Daily High-Probability Stock Alerts, Live Risk Management, and Portfolio Strategy on WhatsApp.</p>
-        <a href="https://wa.me/919588768890?text=Hi,%20I%20want%20to%20join%20the%20VIP%20Stock%20Market%20Group" class="btn-cta">
-            <i class="fab fa-whatsapp"></i> Join VIP WhatsApp Group
-        </a>
+    <section class="max-w-4xl mx-auto px-4 pt-12 pb-16 text-center relative">
+        <!-- Profile Picture DP with Luxury Crest Effect -->
+        <div class="relative w-32 h-32 mx-auto mb-8">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500 to-amber-200 opacity-30 blur-lg"></div>
+            <img src="https://i.pinimg.com/736x/07/21/85/0721859f484396ce57f39dd525faebd8.jpg" alt="Strander Profile" class="relative w-full h-full object-cover rounded-full border-2 border-amber-400/80 p-1.5 gold-glow">
+            <span class="absolute bottom-1 right-1 bg-emerald-500 w-5 h-5 rounded-full border-2 border-black flex items-center justify-center">
+                <i class="fa-solid fa-check text-[10px] text-black font-bold"></i>
+            </span>
+        </div>
 
-        <div class="stats">
-            <div class="stat-card">
-                <h3>5,000+</h3>
-                <p>Active Members</p>
+        <!-- Trust Badge -->
+        <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium uppercase tracking-widest px-5 py-2 rounded-full mb-6">
+            <i class="fa-solid fa-crown text-amber-400"></i> Elite Financial Intelligence
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 tracking-tight">
+            Master <span class="gold-gradient-text font-serif-luxury">Trading, Economics & Business</span> With Institutional Precision
+        </h1>
+        
+        <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+            Eliminate guesswork. Build an unshakeable market mindset, master elite price action strategies, and scale sustainable wealth straight through direct 1-on-1 mentorship.
+        </p>
+
+        <!-- CTA Button (WhatsApp Direct Lead) -->
+        <div class="flex flex-col items-center gap-3">
+            <a href="https://wa.me/919588768890?text=Hi%20Strander,%20I%20want%20to%20learn%20Trading%20%26%20Business" onclick="trackLead()" class="pulse-subtle inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-base md:text-lg px-9 py-4 rounded-full w-full sm:w-auto transition-all duration-300 transform hover:-translate-y-0.5 shadow-2xl border border-emerald-400/30 tracking-wide uppercase">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Connect On WhatsApp Now
+            </a>
+            <span class="text-xs text-gray-500 flex items-center gap-1.5 mt-1">
+                <i class="fa-solid fa-shield-halved text-amber-400"></i> Direct Access • Instant Response
+            </span>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <div class="max-w-4xl mx-auto px-4 mb-12">
+        <div class="grid grid-cols-3 gap-4 border-y border-white/10 py-6 text-center bg-white/[0.01]">
+            <div>
+                <div class="text-xl md:text-2xl font-bold font-serif-luxury gold-gradient-text">1-on-1</div>
+                <div class="text-[11px] md:text-xs text-gray-400 tracking-wider uppercase mt-1">Direct Guidance</div>
             </div>
-            <div class="stat-card">
-                <h3>85%+</h3>
-                <p>Accuracy Rate</p>
+            <div>
+                <div class="text-xl md:text-2xl font-bold font-serif-luxury gold-gradient-text">Price Action</div>
+                <div class="text-[11px] md:text-xs text-gray-400 tracking-wider uppercase mt-1">Institutional Rules</div>
             </div>
-            <div class="stat-card">
-                <h3>100%</h3>
-                <p>Risk Managed</p>
+            <div>
+                <div class="text-xl md:text-2xl font-bold font-serif-luxury gold-gradient-text">100%</div>
+                <div class="text-[11px] md:text-xs text-gray-400 tracking-wider uppercase mt-1">Practical Focus</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Learning Modules Grid -->
+    <section class="max-w-4xl mx-auto px-4 py-8 mb-16">
+        <h2 class="text-xs font-bold text-center text-amber-400/80 mb-10 uppercase tracking-[0.2em] font-serif-luxury">Comprehensive Curriculum Blueprint</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="glass-card p-8 rounded-2xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2 font-serif-luxury">Trading & Markets</h3>
+                <p class="text-gray-400 text-sm leading-relaxed font-light">Price Action mastery, Advanced Technical Analysis, and strict Risk Management protocols designed for longevity.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-card p-8 rounded-2xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2 font-serif-luxury">Global Economics</h3>
+                <p class="text-gray-400 text-sm leading-relaxed font-light">Decode Macroeconomics, liquidity movements, and global market cycles to always stay ahead of trends.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-card p-8 rounded-2xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2 font-serif-luxury">Scalable Business</h3>
+                <p class="text-gray-400 text-sm leading-relaxed font-light">High-leverage business models, psychological resilience, and wealth building principles for real growth.</p>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="features">
-        <h2 class="section-title">What You Get Inside VIP</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Daily Trade Alerts</h3>
-                <p>Precise entry, target, and stop-loss levels for Equity, Nifty & BankNifty trades.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Risk Management</h3>
-                <p>Learn how to protect your capital using position sizing and disciplined rules.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-user-tie"></i>
-                <h3>1-on-1 Guidance</h3>
-                <p>Direct access to expert insights for your existing stock portfolio audit.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Footer Section -->
+    <footer class="py-8 border-t border-white/5 text-center text-gray-600 text-xs">
+        <p class="mb-2">© STRANDER. All Rights Reserved.</p>
+        <p class="text-[10px] text-gray-700 max-w-xl mx-auto px-4">Disclaimer: Trading and investments involve financial risk. Strategic mentorship is designed for educational & skill development purposes only.</p>
+    </footer>
 
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <h2 class="section-title">Choose Your Access Level</h2>
-        <table class="pricing-table">
-            <thead>
-                <tr>
-                    <th>Features</th>
-                    <th>Monthly VIP</th>
-                    <th>Lifetime Wealth Pass</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Daily WhatsApp Tips</td>
-                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
-                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
-                </tr>
-                <tr>
-                    <td>Risk Management Calls</td>
-                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
-                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
-                </tr>
-                <tr>
-                    <td>Portfolio Audit</td>
-                    <td><i class="fas fa-times" style="color:#e74c3c;"></i></td>
-                    <td><i class="fas fa-check" style="color:#25d366;"></i></td>
-                </tr>
-                <tr>
-                    <td>Price</td>
-                    <td><strong>₹1,999 / mo</strong></td>
-                    <td><strong>₹9,999 One-Time</strong></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Final Call to Action -->
-    <section class="footer-cta">
-        <h2 style="margin-bottom: 15px;">Ready to Scale Your Capital?</h2>
-        <p style="color: var(--text-muted); margin-bottom: 25px;">Only 15 seats left for this week's cohort.</p>
-        <a href="https://wa.me/919588768890?text=Hi,%20I%20want%20to%20join%20the%20VIP%20Stock%20Market%20Group" class="btn-cta">
-            <i class="fab fa-whatsapp"></i> Chat On WhatsApp (+91 9588768890)
+    <!-- Bottom Sticky CTA for Mobile High Conversion -->
+    <div class="fixed bottom-0 left-0 right-0 p-3 bg-black/90 border-t border-amber-500/30 backdrop-blur-xl sm:hidden z-50">
+        <a href="https://wa.me/919588768890?text=Hi%20Strander,%20I%20want%20to%20learn%20Trading%20%26%20Business" onclick="trackLead()" class="flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-extrabold py-3.5 px-6 rounded-xl w-full text-center text-xs tracking-wider uppercase shadow-xl">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Start Learning On WhatsApp
         </a>
-    </section>
+    </div>
 
-    <!-- Sticky WhatsApp Button -->
-    <a href="https://wa.me/919588768890?text=Hi,%20I%20want%20to%20join%20the%20VIP%20Stock%20Market%20Group" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <!-- Meta Pixel Lead Tracking Script -->
+    <script>
+        function trackLead() {
+            // Fires Lead Event for BOTH Meta Pixels
+            fbq('track', 'Lead');
+        }
+    </script>
 </body>
 </html>
