@@ -1,214 +1,155 @@
 <!DOCTYPE html>
-<html lang="hi" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STRANDER | Premium Business, Trading & Economics</title>
-    
-    <!-- Tailwind CSS (Fast Loading CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts for Luxury Aesthetics -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <title>Stock Learners Gautam - Stock Market Education</title>
     <style>
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #08080a;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .font-serif-luxury {
-            font-family: 'Cinzel', serif;
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: center;
         }
-        .luxury-bg { 
-            background: radial-gradient(circle at 50% -20%, #1a160d 0%, #08080a 70%); 
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: #1e293b;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            text-align: center;
         }
-        .gold-glow { 
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.15); 
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #38bdf8;
+            margin-bottom: 15px;
         }
-        .gold-border-glow {
-            border-color: rgba(212, 175, 55, 0.3);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
         }
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #AA7C11 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 20px;
         }
-        .gold-button {
-            background: linear-gradient(135deg, #ECC86A 0%, #D4AF37 50%, #9B7318 100%);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
         }
-        .gold-button:hover {
-            background: linear-gradient(135deg, #F3D88D 0%, #E2BD48 50%, #B38321 100%);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        .badge {
+            background: #334155;
+            color: #38bdf8;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
         }
-        .glass-card {
-            background: rgba(18, 18, 22, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        .highlights {
+            text-align: left;
+            background: #0f172a;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 25px;
         }
-        .glass-card:hover {
-            border-color: rgba(212, 175, 55, 0.4);
-            transform: translateY(-4px);
+        .highlights ul {
+            list-style: none;
         }
-        .pulse-subtle {
-            animation: pulse-glow 3s infinite alternate;
+        .highlights li {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
         }
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 15px rgba(34, 197, 94, 0.2); }
-            100% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.5); }
+        .highlights li:last-child {
+            margin-bottom: 0;
+        }
+        .highlights li::before {
+            content: "✓";
+            color: #22c55e;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: #0088cc;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,136,204,0.3);
+        }
+        .cta-button:hover {
+            background: #0077b5;
+        }
+        .disclaimer {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #64748b;
+            text-align: justify;
+            border-top: 1px solid #334155;
+            padding-top: 15px;
+            line-height: 1.4;
         }
     </style>
-
-    <!-- Meta Pixel Code 1 (ID: 1449165750311786) -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1449165750311786');
-    fbq('track', 'PageView');
-    </script>
-    
-    <!-- Meta Pixel Code 2 (ID: 1073841918648635) -->
-    <script>
-    fbq('init', '1073841918648635');
-    fbq('track', 'PageView');
-    </script>
 </head>
-<body class="luxury-bg text-gray-200 min-h-screen antialiased selection:bg-amber-500 selection:text-black flex flex-col justify-between">
+<body>
 
-    <!-- Top Announcement Bar (High Urgency) -->
-    <div class="bg-gradient-to-r from-amber-950 via-zinc-900 to-amber-950 border-b border-amber-500/20 text-center py-2 px-4 text-xs font-semibold tracking-wider text-amber-200/90 uppercase">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping mr-1.5"></span> Exclusive Private Mentorship Circle • Limited Entries
+<div class="container">
+    <!-- Profile Image -->
+    <img class="profile-img" src="https://i.pinimg.com/736x/77/29/04/772904c17d83c6dd3cd37a18f5acf81c.jpg" alt="Stock Learners Gautam Profile">
+
+    <!-- Title / Brand Name -->
+    <h1>Stock Learners Gautam</h1>
+    <p class="subtitle">Financial Education & Stock Market Analytics</p>
+
+    <!-- Key Badges -->
+    <div class="badge-container">
+        <span class="badge">Technical Analysis</span>
+        <span class="badge">Risk Management</span>
     </div>
 
-    <!-- Header Section -->
-    <header class="py-5 px-6 border-b border-white/5 backdrop-blur-xl sticky top-0 z-50 bg-black/60">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <!-- Brand Logo -->
-            <div class="text-2xl md:text-3xl font-serif-luxury font-extrabold tracking-widest uppercase">
-                <span class="gold-gradient-text">Strander</span>
-            </div>
-            <a href="https://wa.me/919588768890?text=Hi%20Strander,%20I%20want%20to%20learn%20Trading%20%26%20Business" onclick="trackLead()" class="gold-button text-black font-extrabold px-6 py-2.5 rounded-full text-xs md:text-sm tracking-wider uppercase transition-all shadow-md flex items-center gap-2">
-                Join Inner Circle <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-4 pt-12 pb-16 text-center relative">
-        <!-- Profile Picture DP with Luxury Crest Effect -->
-        <div class="relative w-32 h-32 mx-auto mb-8">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500 to-amber-200 opacity-30 blur-lg"></div>
-            <img src="https://i.pinimg.com/736x/07/21/85/0721859f484396ce57f39dd525faebd8.jpg" alt="Strander Profile" class="relative w-full h-full object-cover rounded-full border-2 border-amber-400/80 p-1.5 gold-glow">
-            <span class="absolute bottom-1 right-1 bg-emerald-500 w-5 h-5 rounded-full border-2 border-black flex items-center justify-center">
-                <i class="fa-solid fa-check text-[10px] text-black font-bold"></i>
-            </span>
-        </div>
-
-        <!-- Trust Badge -->
-        <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium uppercase tracking-widest px-5 py-2 rounded-full mb-6">
-            <i class="fa-solid fa-crown text-amber-400"></i> Elite Financial Intelligence
-        </div>
-
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 tracking-tight">
-            Master <span class="gold-gradient-text font-serif-luxury">Trading, Economics & Business</span> With Institutional Precision
-        </h1>
-        
-        <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            Eliminate guesswork. Build an unshakeable market mindset, master elite price action strategies, and scale sustainable wealth straight through direct 1-on-1 mentorship.
-        </p>
-
-        <!-- CTA Button (WhatsApp Direct Lead) -->
-        <div class="flex flex-col items-center gap-3">
-            <a href="https://wa.me/919588768890?text=Hi%20Strander,%20I%20want%20to%20learn%20Trading%20%26%20Business" onclick="trackLead()" class="pulse-subtle inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-base md:text-lg px-9 py-4 rounded-full w-full sm:w-auto transition-all duration-300 transform hover:-translate-y-0.5 shadow-2xl border border-emerald-400/30 tracking-wide uppercase">
-                <i class="fa-brands fa-whatsapp text-2xl"></i> Connect On WhatsApp Now
-            </a>
-            <span class="text-xs text-gray-500 flex items-center gap-1.5 mt-1">
-                <i class="fa-solid fa-shield-halved text-amber-400"></i> Direct Access • Instant Response
-            </span>
-        </div>
-    </section>
-
-    <!-- Social Proof Bar -->
-    <div class="max-w-4xl mx-auto px-4 mb-12">
-        <div class="grid grid-cols-3 gap-4 border-y border-white/10 py-6 text-center bg-white/[0.01]">
-            <div>
-                <div class="text-xl md:text-2xl font-bold font-serif-luxury gold-gradient-text">1-on-1</div>
-                <div class="text-[11px] md:text-xs text-gray-400 tracking-wider uppercase mt-1">Direct Guidance</div>
-            </div>
-            <div>
-                <div class="text-xl md:text-2xl font-bold font-serif-luxury gold-gradient-text">Price Action</div>
-                <div class="text-[11px] md:text-xs text-gray-400 tracking-wider uppercase mt-1">Institutional Rules</div>
-            </div>
-            <div>
-                <div class="text-xl md:text-2xl font-bold font-serif-luxury gold-gradient-text">100%</div>
-                <div class="text-[11px] md:text-xs text-gray-400 tracking-wider uppercase mt-1">Practical Focus</div>
-            </div>
-        </div>
+    <!-- Educational Focus Section -->
+    <div class="highlights">
+        <ul>
+            <li>Daily Stock Market Educational Updates</li>
+            <li>In-depth Chart Pattern Analysis</li>
+            <li>Risk-to-Reward Ratio Frameworks</li>
+            <li>Market Psychology & Discipline Insights</li>
+        </ul>
     </div>
 
-    <!-- Key Learning Modules Grid -->
-    <section class="max-w-4xl mx-auto px-4 py-8 mb-16">
-        <h2 class="text-xs font-bold text-center text-amber-400/80 mb-10 uppercase tracking-[0.2em] font-serif-luxury">Comprehensive Curriculum Blueprint</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="glass-card p-8 rounded-2xl transition-all duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 font-serif-luxury">Trading & Markets</h3>
-                <p class="text-gray-400 text-sm leading-relaxed font-light">Price Action mastery, Advanced Technical Analysis, and strict Risk Management protocols designed for longevity.</p>
-            </div>
+    <!-- Compliant Call to Action -->
+    <a href="https://t.me/+-bqhZBYdIyE3YjY1" class="cta-button" target="_blank" rel="noopener noreferrer">
+        Join Free Educational Telegram Channel
+    </a>
 
-            <!-- Card 2 -->
-            <div class="glass-card p-8 rounded-2xl transition-all duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
-                    <i class="fa-solid fa-earth-americas"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 font-serif-luxury">Global Economics</h3>
-                <p class="text-gray-400 text-sm leading-relaxed font-light">Decode Macroeconomics, liquidity movements, and global market cycles to always stay ahead of trends.</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="glass-card p-8 rounded-2xl transition-all duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
-                    <i class="fa-solid fa-briefcase"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 font-serif-luxury">Scalable Business</h3>
-                <p class="text-gray-400 text-sm leading-relaxed font-light">High-leverage business models, psychological resilience, and wealth building principles for real growth.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="py-8 border-t border-white/5 text-center text-gray-600 text-xs">
-        <p class="mb-2">© STRANDER. All Rights Reserved.</p>
-        <p class="text-[10px] text-gray-700 max-w-xl mx-auto px-4">Disclaimer: Trading and investments involve financial risk. Strategic mentorship is designed for educational & skill development purposes only.</p>
-    </footer>
-
-    <!-- Bottom Sticky CTA for Mobile High Conversion -->
-    <div class="fixed bottom-0 left-0 right-0 p-3 bg-black/90 border-t border-amber-500/30 backdrop-blur-xl sm:hidden z-50">
-        <a href="https://wa.me/919588768890?text=Hi%20Strander,%20I%20want%20to%20learn%20Trading%20%26%20Business" onclick="trackLead()" class="flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-extrabold py-3.5 px-6 rounded-xl w-full text-center text-xs tracking-wider uppercase shadow-xl">
-            <i class="fa-brands fa-whatsapp text-lg"></i> Start Learning On WhatsApp
-        </a>
+    <!-- Mandatory Regulatory & Platform Disclaimer -->
+    <div class="disclaimer">
+        <strong>Educational Disclaimer:</strong> We are strictly an educational platform. The content shared on our Telegram channel and platform is for educational and informational purposes only and should not be construed as investment or trading advice. Trading in financial markets carries substantial risk of loss and is not suitable for every investor. Past performance is not indicative of future results. Please consult a SEBI registered financial advisor before making any investment decisions.
     </div>
+</div>
 
-    <!-- Meta Pixel Lead Tracking Script -->
-    <script>
-        function trackLead() {
-            // Fires Lead Event for BOTH Meta Pixels
-            fbq('track', 'Lead');
-        }
-    </script>
 </body>
 </html>
